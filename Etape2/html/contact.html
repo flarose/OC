@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Bienvenue sur mon site</title>
+<meta name="description" content="description du site, ne pas dépasser 250 caractères" />
+<!-- Appel de la police google font en graisse 300 et 700-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+<!-- Appels css -->
+<link rel="stylesheet" type="text/css" href="styles/style.css" />
+<link rel="stylesheet" type="text/css" href="styles/bg-fullscreen.css" />
+<link rel="stylesheet" type="text/css" href="styles/responsive.css" />
+<!-- viewport -->
+<!-- initial scale adapte le viewport aux dimensions du périphérique, la taille du viewport s'apate à l'orientation du périphérique
+Cela vous affranchit de l'agrandissement indésirable des polices sous IOS lors du passage en orientation paysage
+Mais créé un bug de zoom général de toute la page qu'il faut corriger via un fix javascript. Voir appele js plus bas-->
+<meta name="viewport" content="initial-scale=1.0" />
+<!-- Appels js -->
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/bg-fullscreen.js"></script>
+<script type="text/javascript" src="js/opacite-img.js"></script>
+<script type="text/javascript" src="js/filtre-folio.js"></script>
+<script type="text/javascript" src="js/retour-top.js"></script>
+<!-- Fix JS : corrige le bug de zoom -->
+<script type="text/javascript" src="js/fix.js"></script>
+</head>
+
+<body>
+<!-- Images d'arrière plan -->
+
+<ul class="cb-slideshow">
+	<li><span>Image 01</span></li>
+    <li><span>Image 02</span></li>
+    <li><span>Image 03</span></li>
+    <li><span>Image 04</span></li>
+    <li><span>Image 05</span></li>
+    <li><span>Image 06</span></li>
+</ul>
+<!-- Fin images arrière plan -->
+
+<!-- Début menu conteneur -->
+<div id="menu-conteneur">
+	<!-- Début menu -->
+	<div id="menu">
+		<div id="logo" class="mb30"><a href="/" title="Mon logo"><img src="images/logo.png" title="Mon logo" alt="Mon logo"/></a></div>
+        <!-- Rubriques -->
+        <ul>
+        	<li><a href="presentation.html" title="Présentation">Présentation</a><br /><span>Venez découvrir un petit bout de moi</span></li>
+            <li><a href="/" title="Mes références">Portfolio</a><br /><span>Venez découvrir quelques créations</span></li>
+            <li><a href="actualites.html" title="Actualités">Actualités</a><br /><span>Venez découvrir toutes mes actualités</span></li>
+            <li><a href="newsletter.html" title="Newsletter">Newsletter</a><br /><span>Abonnez-vous à ma newsletter</span></li>
+            <li class="active"><a class="active" href="contact.html" title="Contact">Contact</a><br /><span>Mes coordonnées et plan d’accès</span></li>
+        </ul>
+        <!-- Fin rubriques -->
+        
+        <!-- Réseaux -->
+        <div id="reseaux">
+        <!-- Appel de l'id minigallery créé dans le fichier opacite-img.js ligne 6 pour activier l'opacité des images -->
+        <div id="miniGallery" class="mt30">
+        	<a href="#" title="Mon facebook"><img src="images/ico-facebook.png" title="facebook" alt="facebook" /></a>
+            <a href="#" title="Mon twitter"><img src="images/ico-twitter.png" title="twitter" alt="twitter" /></a>
+            <a href="#" title="Mon In"><img src="images/ico-in.png" title="in" alt="in" /></a>
+            <a href="#" title="Mon google+"><img src="images/ico-google.png" title="google+" alt="google+" /></a>
+        </div>
+        </div>
+        <!-- Fin Réseaux -->
+        
+        <!-- Code facebook -->
+        <div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+        </script>
+        
+        <div class="fb-like" data-href="http://www.facebook.com/communication.team8" data-send="false" data-layout="button_count" data-width="220" data-show-faces="false"></div>
+        <!-- Fin Code facebook -->
+    </div>
+    <!-- Fin menu -->
+</div>
+<!-- Fin menu conteneur -->
+
+<!-- début conteneur -->
+<div id="conteneur">
+	<!-- Début main -->
+	<div id="main">
+    	<h1>Me contacter</h1>
+        <hr />
+        <div class="ariane">Vous êtes ici : <a href="#">Home</a> » Contact</div>
+        <h2 class="nuancier mt15">Coordonnées et horaires d'ouvertures</h2>
+        <p class="mt15">Mauris dignissim sapien vitae nisl malesuada vulputate. Quisque at sem nec <a href="#">nulla mollis</a> rutrum. Nam eget justo nisl, fringilla rutrum est. Proin eget ante sapien, mattis aliquam enim. Pellentesque fermentum massa nec lorem dapibus commodo. Nulla pharetra consectetur lorem. Maecenas lobortis ultricies quam. Proin viverra, massa <a href="#">non tincidunt</a> pulvinar, ante erat molestie urna, non pretium sem est at lorem. </p>
+        
+        
+        <iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.fr/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=rennes&amp;aq=&amp;sll=46.75984,1.738281&amp;sspn=12.166364,33.33252&amp;ie=UTF8&amp;hq=&amp;hnear=Rennes,+Ille-et-Vilaine,+Bretagne&amp;t=m&amp;z=13&amp;ll=48.113475,-1.675708&amp;output=embed"></iframe>
+		<hr class="hr-2 mt15" />
+        <h2 class="nuancier mt15">M'écrire</h2>
+        <!-- Début contact -->
+        <form id="contactform">
+		<p><input name="fullname" id="fullname" class="txt required" value="Nom" type="text" /></p>
+        <p><input name="email" id="email" class="txt required" value="E-Mail" type="text" /></p>
+        <p><input name="url" id="url" class="txt required" value="Site Internet" type="text" /></p>
+        <p><textarea rows="10" id="form_message" class="required" name"form_message"></textarea></p>
+        <p><input id="submit" class="submit-button" name="submit" value="Envoyer" type="submit" />
+        <input class="submit-button" name="reset" value="Reset" type="reset" />
+        </p>
+        </form>
+        <!-- Fin contact -->
+    </div>
+    <!-- Fin main -->
+</div>
+<!-- Fin conteneur -->
+
+<!-- Footer -->
+<div id="footer">
+	<div class="copyright">© 2012 Agence de communication visuelle - Web et Print à Rennes. Tous droits réservés</div>
+    <div id="retour-top"><a href="#menu">Retour en haut de page <img src="images/ico-retour.png" /></a></div>
+</div>
+<!-- Fin footer -->
+</body>
+</html>

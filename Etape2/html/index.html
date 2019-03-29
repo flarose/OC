@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Bienvenue sur mon site</title>
+<meta name="description" content="description du site, ne pas dépasser 250 caractères" />
+<!-- Appel de la police google font en graisse 300 et 700-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+<!-- Appels css -->
+<link rel="stylesheet" type="text/css" href="styles/style.css" />
+<link rel="stylesheet" type="text/css" href="styles/bg-fullscreen.css" />
+<link rel="stylesheet" type="text/css" href="styles/responsive.css" />
+<!-- viewport -->
+<!-- initial scale adapte le viewport aux dimensions du périphérique, la taille du viewport s'apate à l'orientation du périphérique
+Cela vous affranchit de l'agrandissement indésirable des polices sous IOS lors du passage en orientation paysage
+Mais créé un bug de zoom général de toute la page qu'il faut corriger via un fix javascript. Voir appele js plus bas-->
+<meta name="viewport" content="initial-scale=1.0" />
+<!-- Appels js -->
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/bg-fullscreen.js"></script>
+<script type="text/javascript" src="js/opacite-img.js"></script>
+<script type="text/javascript" src="js/filtre-folio.js"></script>
+<script type="text/javascript" src="js/retour-top.js"></script>
+<!-- Fix JS : corrige le bug de zoom -->
+<script type="text/javascript" src="js/fix.js"></script>
+</head>
+
+<body>
+<!-- Images d'arrière plan -->
+
+<ul class="cb-slideshow">
+	<li><span>Image 01</span></li>
+    <li><span>Image 02</span></li>
+    <li><span>Image 03</span></li>
+    <li><span>Image 04</span></li>
+    <li><span>Image 05</span></li>
+    <li><span>Image 06</span></li>
+</ul>
+<!-- Fin images arrière plan -->
+
+<!-- Début menu conteneur -->
+<div id="menu-conteneur">
+	<!-- Début menu -->
+	<div id="menu">
+		<div id="logo" class="mb30"><a href="/" title="Mon logo"><img src="images/logo.png" title="Mon logo" alt="Mon logo"/></a></div>
+        <!-- Rubriques -->
+        <ul>
+        	<li><a href="presentation.html" title="Présentation">Présentation</a><br /><span>Venez découvrir un petit bout de moi</span></li>
+            <li class="active"><a class="active" href="/" title="Mes références">Portfolio</a><br /><span>Venez découvrir quelques créations</span></li>
+            <li><a href="actualites.html" title="Actualités">Actualités</a><br /><span>Venez découvrir toutes mes actualités</span></li>
+            <li><a href="newsletter.html" title="Newsletter">Newsletter</a><br /><span>Abonnez-vous à ma newsletter</span></li>
+            <li><a href="contact.html" title="Contact">Contact</a><br /><span>Mes coordonnées et plan d’accès</span></li>
+        </ul>
+        <!-- Fin rubriques -->
+        
+        <!-- Réseaux -->
+        <div id="reseaux">
+        <!-- Appel de l'id minigallery créé dans le fichier opacite-img.js ligne 6 pour activier l'opacité des images -->
+        <div id="miniGallery" class="mt30">
+        	<a href="#" title="Mon facebook"><img src="images/ico-facebook.png" title="facebook" alt="facebook" /></a>
+            <a href="#" title="Mon twitter"><img src="images/ico-twitter.png" title="twitter" alt="twitter" /></a>
+            <a href="#" title="Mon In"><img src="images/ico-in.png" title="in" alt="in" /></a>
+            <a href="#" title="Mon google+"><img src="images/ico-google.png" title="google+" alt="google+" /></a>
+        </div>
+        </div>
+        <!-- Fin Réseaux -->
+        
+        <!-- Code facebook -->
+        <div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+        </script>
+        
+        <div class="fb-like" data-href="http://www.facebook.com/communication.team8" data-send="false" data-layout="button_count" data-width="auto" data-show-faces="false"></div>
+        <!-- Fin Code facebook -->
+    </div>
+    <!-- Fin menu -->
+</div>
+<!-- Fin menu conteneur -->
+
+<!-- début conteneur -->
+<div id="conteneur">
+	<!-- Début main -->
+	<div id="main">
+    	<h1>Portfolio</h1>
+        <hr />
+        <div class="ariane">Vous êtes ici : <a href="#">Home</a> » Portfolio</div>
+        <h2 class="nuancier mt15">VOici quelques <span class="bleu">références graphiques</span></h2>
+        <p class="mt15">Mauris dignissim sapien vitae nisl malesuada vulputate. Quisque at sem nec <a href="#">nulla mollis</a> rutrum. Nam eget justo nisl, fringilla rutrum est. Proin eget ante sapien, mattis aliquam enim. Pellentesque fermentum massa nec lorem dapibus commodo. Nulla pharetra consectetur lorem. Maecenas lobortis ultricies quam. Proin viverra, massa <a href="#">non tincidunt</a> pulvinar, ante erat molestie urna, non pretium sem est at lorem. </p>
+    	<hr class="hr-2" />
+        
+        <!-- Début portfolio filtrable -->
+        <!-- Filtre -->
+        <div id="filters">
+          <div id="filters2">
+            <ul id="portfolio-filter">
+              <!-- On récupère l'id #portfolio-filter créé dans le fichier filtre-folio.js ligne 11 -->
+              <!-- On créé dans le href nos catégories -->
+              <li><a href="#web" title="" rel="web">Web</a></li>
+              <li><a href="#print" title="" rel="print">Print</a></li>
+              <li><a href="#3D" title="" rel="3D">3D</a></li>
+              <li><a href="#photo" title="" rel="photo">Photo</a></li>
+              <li><a href="#all" title="" class="allcats">Afficher tout</a></li>
+              <!-- On active le background du bouton afficher tout avec la class allcats -->              
+            </ul>
+          </div>
+        </div>
+        <!-- Fin Filtre -->
+        
+        <!-- Fiche -->
+        <!-- Appel de l'id minigallery créé dans le fichier opacite-img.js ligne 6 pour activer l'opactité des images -->
+        <div id="miniGallery">
+        	<ul id="portfolio-list">
+            	<!-- Créer une class dans chaque <li> et récupérer les intitulés des catégories afin de filtrer les références-->
+            	<li class="web">
+                <!-- Chaque description des projets doit se placer entre les balises <p> </p> -->
+                <p>Le chat du dernier étage</p>
+                <!-- Fin description projet -->
+                <a href="#" title=""><img src="images/01.jpg" alt="" title="" /><h4>Photo prise lors de mon voyage au Japon. <span class="bleu">Canon 650D</span></h4></a>
+                </li>
+                
+                
+                <li class="print">
+                <!-- Chaque description des projets doit se placer entre les balises <p> </p> -->
+                <p>Le chat du dernier étage</p>
+                <!-- Fin description projet -->
+                <a href="#" title=""><img src="images/02.jpg" alt="" title="" /><h4>Photo prise lors de mon voyage au Japon. <span class="bleu">Canon 650D</span></h4></a>
+                </li>
+                
+                <li class="3D">
+                <!-- Chaque description des projets doit se placer entre les balises <p> </p> -->
+                <p>Le chat du dernier étage</p>
+                <!-- Fin description projet -->
+                <a href="#" title=""><img src="images/03.jpg" alt="" title="" /><h4>Photo prise lors de mon voyage au Japon. <span class="bleu">Canon 650D</span></h4></a>
+                </li>
+                
+                <li class="web">
+                <!-- Chaque description des projets doit se placer entre les balises <p> </p> -->
+                <p>Le chat du dernier étage</p>
+                <!-- Fin description projet -->
+                <a href="#" title=""><img src="images/04.jpg" alt="" title="" /><h4>Photo prise lors de mon voyage au Japon. <span class="bleu">Canon 650D</span></h4></a>
+                </li>
+                
+                <li class="photo">
+                <!-- Chaque description des projets doit se placer entre les balises <p> </p> -->
+                <p>Le chat du dernier étage</p>
+                <!-- Fin description projet -->
+                <a href="#" title=""><img src="images/05.jpg" alt="" title="" /><h4>Photo prise lors de mon voyage au Japon. <span class="bleu">Canon 650D</span></h4></a>
+                </li>
+                
+                <li class="print">
+                <!-- Chaque description des projets doit se placer entre les balises <p> </p> -->
+                <p>Le chat du dernier étage</p>
+                <!-- Fin description projet -->
+                <a href="#" title=""><img src="images/06.jpg" alt="" title="" /><h4>Photo prise lors de mon voyage au Japon. <span class="bleu">Canon 650D</span></h4></a>
+                </li>
+                
+                <li class="photo">
+                <!-- Chaque description des projets doit se placer entre les balises <p> </p> -->
+                <p>Le chat du dernier étage</p>
+                <!-- Fin description projet -->
+                <a href="#" title=""><img src="images/07.jpg" alt="" title="" /><h4>Photo prise lors de mon voyage au Japon. <span class="bleu">Canon 650D</span></h4></a>
+                </li>
+                
+                 <li class="web">
+                <!-- Chaque description des projets doit se placer entre les balises <p> </p> -->
+                <p>Le chat du dernier étage</p>
+                <!-- Fin description projet -->
+                <a href="#" title=""><img src="images/04.jpg" alt="" title="" /><h4>Photo prise lors de mon voyage au Japon. <span class="bleu">Canon 650D</span></h4></a>
+                </li>
+                
+                <li class="photo">
+                <!-- Chaque description des projets doit se placer entre les balises <p> </p> -->
+                <p>Le chat du dernier étage</p>
+                <!-- Fin description projet -->
+                <a href="#" title=""><img src="images/05.jpg" alt="" title="" /><h4>Photo prise lors de mon voyage au Japon. <span class="bleu">Canon 650D</span></h4></a>
+                </li>
+                
+                <li class="print">
+                <!-- Chaque description des projets doit se placer entre les balises <p> </p> -->
+                <p>Le chat du dernier étage</p>
+                <!-- Fin description projet -->
+                <a href="#" title=""><img src="images/06.jpg" alt="" title="" /><h4>Photo prise lors de mon voyage au Japon. <span class="bleu">Canon 650D</span></h4></a>
+                </li>
+                
+                <li class="photo">
+                <!-- Chaque description des projets doit se placer entre les balises <p> </p> -->
+                <p>Le chat du dernier étage</p>
+                <!-- Fin description projet -->
+                <a href="#" title=""><img src="images/07.jpg" alt="" title="" /><h4>Photo prise lors de mon voyage au Japon. <span class="bleu">Canon 650D</span></h4></a>
+                </li>
+                
+                 <li class="print">
+                <!-- Chaque description des projets doit se placer entre les balises <p> </p> -->
+                <p>Le chat du dernier étage</p>
+                <!-- Fin description projet -->
+                <a href="#" title=""><img src="images/06.jpg" alt="" title="" /><h4>Photo prise lors de mon voyage au Japon. <span class="bleu">Canon 650D</span></h4></a>
+                </li>
+            
+            </ul>
+        </div>
+        <!-- Fin Fiche -->
+        
+        <!-- Fin portfolio filtrable -->
+        
+    </div>
+    <!-- Fin main -->
+</div>
+<!-- Fin conteneur -->
+
+<!-- Footer -->
+<div id="footer">
+	<div class="copyright">© 2012 Agence de communication visuelle - Web et Print à Rennes. Tous droits réservés</div>
+    <div id="retour-top"><a href="#menu">Retour en haut de page <img src="images/ico-retour.png" /></a></div>
+</div>
+<!-- Fin footer -->
+</body>
+</html>

@@ -1,0 +1,110 @@
+/* --------------------------------------------------------------------------------------------------------------- */
+/* Résolution d'écran comprise etre 1025 et 1280px
+/* --------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width:1025px) and (max-width:1280px) {
+/* Menu */
+#menu-conteneur					{ left:10px;}
+/* Contenu */
+#conteneur						{ width:665px; left:285px;}
+/* Page portfolio */
+ul#portfolio-list li a			{ width:211px; height:140px;}
+ul#portfolio-list li p			{ font-size:12px; width:211px; height:20px; background:url(../images/bg-titre-fiche.png) repeat-y center top; line-height:20px;}
+ul#portfolio-list li img		{ width:211px; height:140px; }
+ul#portfolio-list li h4			{ font-size:13px; padding:50px 15px 15px 15px; }
+/* actualités */
+#conteneur-blog					{ width:445px; left:285px;}
+#sidebar						{ left: 787px;width:200px;padding:10px 10px 50px 10px;}
+
+
+/* footer */
+.copyright						{ padding:25px 0 15px 290px; font-size:13px;}
+#retour-top						{ margin-left:172px;}
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+/* Résolution comprise entre 800 et 1024 (tablette retournée et autres...)
+/* --------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width:801px) and (max-width:1024px) {
+/* Menu */
+#menu-conteneur					{ width:200px;  position:relative; left:10px; float:left;}	
+#menu							{ width:200px;}
+#menu span						{ display:none;}
+#menu ul						{ padding-left:45px; margin-bottom:40px;}
+#menu li 						{ width:100px;  padding:10px 0px;}
+#menu li a 						{ font-size:15px;}
+/* Contenu */
+#conteneur						{ position: absolute; width:490px; left:220px; float:left;}
+#main img, #main-blog img		{ width:100%}
+/* Page portfolio */
+ul#portfolio-list li			{ width:100%; height:auto;  margin-right:0px; margin-bottom:20px;}
+ul#portfolio-list li a			{  width:100%; height:100%; }
+ul#portfolio-list li p			{ background:url(../images/bg-titre-fiche.png) repeat-y center top; }
+ul#portfolio-list li img		{ width:100%; height:auto; }
+ul#portfolio-list li h4			{ font-size:13px; padding:50px 15px 50px 0; }
+/* page actu */
+#conteneur-blog					{ position:absolute; width:490px; left:220px;}
+#sidebar						{ display:none;}
+/* footer */
+#footer							{ display:none;}
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+/* Résolution inférieur à 800px
+/* --------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width:800px) {
+/* Menu */
+#menu-conteneur					{ width:100%; position:relative; top:0px; left:0px; padding:15px 0; float:left;}	
+#menu							{ width:100%; text-align:center; float:left; font-size:12px;}
+#menu span						{ display:none;}
+#menu ul						{ padding-left:120px; margin-bottom:40px;}
+#menu li 						{ width:100px;  padding:10px 0px; float:left; margin-right:10px;}
+#menu li a 						{ font-size:15px;}
+#reseaux 						{ width:100%; float:left;}
+#conteneur						{ left:0px; width:100%; top:10px; float:left;}
+#main							{ padding: 10px 0px 10px 0px; margin-bottom:30px;}
+/* Titres
+/* --------------------------------------------------------------------------------------------------------------- */
+#main h1, #main-blog h1, #main p, #main-blog p{ margin-left:15px; margin-right:15px;font-size:11px}
+#main h2, #main-blog h2			{ margin-left:15px; margin-right:15px; font-size:13px;}
+hr								{ margin-left:15px; margin-right:15px;}
+.hr-2							{ margin-left:15px; margin-right:15px;}
+.ariane							{ margin-left:15px; margin-right:15px;}
+
+/* Page portfolio */
+ul#portfolio-list li			{ width:100%; height:auto;  margin-right:0px; margin-bottom:30px;}
+ul#portfolio-list li a			{  width:100%; height:150px; }
+ul#portfolio-list li p			{ background:url(../images/bg-titre-fiche.png) repeat-y center top; }
+ul#portfolio-list li img		{ width:100%; height:auto; }
+ul#portfolio-list li h4			{ font-size:13px; padding:75px 15px 0px 15px; }
+
+#main img, #main-blog img		{ width:100%}
+
+#conteneur-blog					{ width:100%; left:0px; }
+#main-blog						{ float:left; width:100%;  padding: 10px 0px 10px 0px;}
+#main-blog img					{ margin-left:15px; width:96%;}
+.lire-suite						{ margin-left:15px;}
+
+#footer { display:none;}
+
+
+/* --------------------------------------------------------------------------------------------------------------- */
+/* Résolution comprise entre 0 et 480px (mobile)
+/* --------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width:0px) and (max-width:480px) {
+
+#menu ul						{ padding-left:0px; width:100%}
+#menu li 						{ width:100%;  padding:10px 0px;margin-bottom:5px;}
+
+	
+}
+@media screen and (min-width:0px) and (max-width:320px) {
+#main h2, #main-blog h2			{ margin-left:15px; margin-right:15px; font-size:11px; line-height:13px;}
+}
