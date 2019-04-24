@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Test "gestion des animations" en JQuery</title>
+    
+</head>
+
+<body>
+<form>
+  Cliquez sur les zones de texte<p>
+  <fieldset id="premier">
+    <legend>Premier groupe</legend>
+    <input type="text" class="f" id="Zone-de-texte-1"><p>
+    <input type="text" class="f" id="Zone-de-texte-2"><br />
+  </fieldset>
+
+  <fieldset id="deuxieme">
+    <legend>Deuxième groupe</legend>
+    <input type="text" class="f" id="Zone-de-texte-3"><p>
+    <input type="text" class="f" id="Zone-de-texte-4"><br />
+  </fieldset>
+</form><br />
+
+Focus : <span id="resultat"></span><br />
+Perte de focus : <span id="resultat2"></span>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+     $(function() {
+        $('fieldset').focusin(function() {
+          $('#resultat').text($(this).attr('id'));
+        });
+        $('fieldset').focusout(function() {
+          $('#resultat2').text($(this).attr('id'));
+        });
+     });
+    </script>
+</body>
+
+</html>

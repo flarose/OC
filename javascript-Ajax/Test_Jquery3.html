@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Test gestionnaire d'evenements</title>
+    
+</head>
+
+<body>
+    <h1>Mon test 2</h1>
+    tapez du texte dans la zone de texte en le faisant commencer et/ou finir par des esppaces, ouis cliquez sur le bouton <br><br>
+    <input type="text" id="texte"/>
+    <button id="action">cliquez ici</button>
+    <pre id="resultat"></pre>
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+    $(function() {
+       $('#action').click(function() {
+           var leTexte = $('#texte').val();
+           $('#resultat').html('Texte original :" ' + leTexte + ' "' + '<br>Apres la fonction trim() : "' + $.trim(leTexte) + '"');
+       })
+        
+    })
+    </script>
+</body>
+
+</html>

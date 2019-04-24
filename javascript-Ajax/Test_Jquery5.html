@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Test "gestion des animations" en JQuery</title>
+    
+</head>
+
+<body>
+    <button id="affiche">Faire apparaître les lignes paires</button>
+    <button id="cache">Faire disparaître les lignes paires</button><br />
+    <table border>
+      <tr><td>a</td><td>b</td><td>c</td></tr>
+      <tr><td>d</td><td>e</td><td>f</td></tr>
+      <tr><td>g</td><td>h</td><td>i</td></tr>
+      <tr><td>j</td><td>k</td><td>l</td></tr>
+      <tr><td>m</td><td>n</td><td>o</td></tr>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+    $(function() {
+        $('tr:even').css('background','yellow');
+        $('td').css('width','200px');
+        $('td').css('text-align','center');
+        $('#affiche').click(function() {
+          $('tr:even').show('slow');
+        } ); 
+        $('#cache').click(function() {
+          $('tr:even').hide(1000);
+        });
+      });
+    </script>
+</body>
+
+</html>

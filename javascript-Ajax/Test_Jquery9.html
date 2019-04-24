@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Test "gestion des animations" en JQuery</title>
+    
+</head>
+
+<body>
+Cliquez sur l'image après avoir activé le clic<br />
+<img src="paysage1.jpeg" id='image'><br />
+<button id="activer">Activer le clic</button>
+<button id="desactiver">Désactiver le clic</button>
+    
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script>
+ $(function() {
+    function traitement() {
+      alert('Image cliquée');
+    }  
+    $('#activer').on('click', function() {
+      $('#image').click(traitement);
+    });
+    $('#desactiver').on('click', function() {
+      $('#image').off('click', traitement);
+    });
+});
+</script>
+</body>
+
+</html>

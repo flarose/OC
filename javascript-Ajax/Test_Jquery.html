@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Test gestionnaire d'evenements</title>
+    <style>
+        img {
+            position:absolute; /* les images vont se superposer */ 
+            left:0px;
+            top:0px;
+            display:none;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <h1>Mon test 2</h1>
+    <img src="paysage5.jpeg" id="img5">
+    <img src="paysage4.jpeg" id="img4">
+    <img src="paysage3.jpeg" id="img3">
+    <img src="paysage2.jpeg" id="img2">
+    <img src="paysage1.jpeg" id="img1">
+    
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+    $(function() {
+       var i=0;
+       affiche();
+        function afffiche() {
+            i++;
+            if(i==1) precedent ='#img5'
+                else precedent = '#img' + (i-1);
+            var actuel = '#img' + i;
+            $(precedent).fadeOut(2000);
+            $(actuel).fadeIn(2000);
+            if (i==5) i=0;
+        }
+        setInterval(affiche, 2000);
+    })
+    </script>
+</body>
+
+</html>
